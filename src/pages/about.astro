@@ -1,10 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
-<Layout title="Portfolio Gabriel SACCO">
+
+<Layout title = {pageTitle}>
 	<main>
+		<a href="/"><span class="button">Home</span></a>
+<a href="/about/"><span class="button">About</span></a>
+<a href="/project/"><span class="button">Projects</span></a>
 		<svg
 			class="astro-a"
 			width="495"
@@ -33,30 +48,7 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Hi &#x1F44B;, I am <span class="text-gradient">Gabriel SACCO</span></h1>
-		
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="about"
-				title="About me"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Projects"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Skills"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Contact me"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<h1><span class="text-gradient">Astro</span></h1>
 	</main>
 </Layout>
 
@@ -117,4 +109,19 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+	.button {
+            display:flexbox;
+            width: fit-content;
+            margin: 0 auto;
+            color: white;
+            text-decoration:dashed;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Style pour les boutons blancs au survol */
+        .button:hover {
+            background-color: lightsteelblue;
+            color: white;
+        }
 </style>
