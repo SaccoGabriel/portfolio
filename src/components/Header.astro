@@ -1,0 +1,41 @@
+---
+import Link from "../components/Link.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  job: string;
+  body: string;
+}
+
+const { title, subtitle, body, job } = Astro.props;
+---
+
+<div class="header">
+  <h1>
+    {title}
+  </h1>
+  <h2 class="test">
+    {subtitle + "." + job}
+  </h2>
+  <Link title="Github" href="https://github.com/SaccoGabriel" />
+  <Link title="Linkedin" href="https://www.linkedin.com/in/gabriel-sacco" />
+</div>
+
+<style>
+  .header {
+    position: absolute;
+    top: 10%;
+    margin-left: 50px;
+  }
+  .test {
+    color: white;
+    position: relative;
+  }
+  h1 {
+    color: white;
+    position: relative;
+    font-weight: lighter;
+    font-style: italic;
+  }
+</style>

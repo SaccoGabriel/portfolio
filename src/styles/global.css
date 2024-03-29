@@ -1,0 +1,11 @@
+:root
+{
+    --background:hsl(27, 24%, 7%);
+    --foreground:hsl(28, 33%, 9%);
+    
+    --card:hsl(29, 65%, 12%);
+    --card-foreground:hsl(28, 100%, 14%);
+
+    --border: hsl(25, 63%, 30%);
+    --text:hsl(26, 100%, 67%);
+}

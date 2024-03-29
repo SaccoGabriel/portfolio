@@ -1,0 +1,31 @@
+---
+import '../styles/global.css'
+interface Props {
+	title: string;
+	href: string;
+}
+
+const { href, title} = Astro.props;
+
+---
+
+<a class= "socialMedia" href={href}> {title}</a>
+
+<style>
+    .socialMedia
+    {
+        border-radius: 4px ;
+        padding: 7px;
+        background-color: aliceblue;
+        color: inherit;
+        text-underline-offset:inherit;
+        text-decoration:none;
+    }
+
+    .socialMedia:hover{
+        background-color: lightcoral;
+        color: inherit;
+        text-underline-offset:inherit;
+        text-decoration:none;
+    }
+</style>
