@@ -1,7 +1,7 @@
 :root
 {
     --background:hsl(27, 24%, 7%);      /* 1 */
-    --foreground:hsl(26, 35%, 9%);      /* 2 */
+    --foreground:hsl(28, 33%, 9%);      /* 2 */
     
     --card:hsl(29, 65%, 12%);           /* 3 */
     --card-foreground:hsl(28, 100%, 14%);   /* 4 */
@@ -14,7 +14,9 @@
     
     --low-contrast-text:hsl(26, 100%, 67%); /* 11 */
     --high-contrast-text:hsl(30, 100%, 88%);
+    
 }
+
 
 
 /*

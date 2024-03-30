@@ -1,33 +1,51 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 import '../styles/global.css'
+
 interface Props {
 	title: string;
 	href: string;
+    icon: string;
 }
 
-const { href, title} = Astro.props;
+const { icon, href, title} = Astro.props;
 
 ---
 
-<a class= "contact" href={href}> {title}</a>
+<a class= "contact" href={href}> <span class="icon"><Icon name={icon} /></span> {title}</a>
 
 <style>
-    .contact
+    .icon
     {
         position: relative;
+        top:2px;
+    }
+    .contact
+    {
+        font-weight:700;
+        position: relative;
         margin: 3px;
-        top: 10px;
-        border-radius: 4px ;
+        top: 1px;
         padding: 7px;
-        background-color: aliceblue;
-        color: inherit;
+
         text-underline-offset:inherit;
         text-decoration:none;
-    }
+        border-radius: 20px;
+
+        background: var(--card-foreground);
+        color: var(--low-contrast-text);
+         }
 
     .contact:hover{
-        background-color: lightcoral;
-        color: inherit;
+        margin: 3px;
+
+        border-radius: 20px;
+        background-color: var(--selected-background);
+        color: var(--high-contrast-text);
+        border-color:var(--selected-border);
+        border-radius: 20px;
+
         text-underline-offset:inherit;
         text-decoration:none;
     }
