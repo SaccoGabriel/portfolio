@@ -9,11 +9,14 @@ const { href, title} = Astro.props;
 
 ---
 
-<a class= "socialMedia" href={href}> {title}</a>
+<a class= "contact" href={href}> {title}</a>
 
 <style>
-    .socialMedia
+    .contact
     {
+        position: relative;
+        margin: 3px;
+        top: 10px;
         border-radius: 4px ;
         padding: 7px;
         background-color: aliceblue;
@@ -22,7 +25,7 @@ const { href, title} = Astro.props;
         text-decoration:none;
     }
 
-    .socialMedia:hover{
+    .contact:hover{
         background-color: lightcoral;
         color: inherit;
         text-underline-offset:inherit;

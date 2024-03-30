@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "1.0.7",
-    "astro": "^4.5.10"
+    "astro": "^4.5.12"
   }
 }

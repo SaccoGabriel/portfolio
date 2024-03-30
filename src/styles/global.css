@@ -1,11 +1,33 @@
 :root
 {
-    --background:hsl(27, 24%, 7%);
-    --foreground:hsl(28, 33%, 9%);
+    --background:hsl(27, 24%, 7%);      /* 1 */
+    --foreground:hsl(26, 35%, 9%);      /* 2 */
     
-    --card:hsl(29, 65%, 12%);
-    --card-foreground:hsl(28, 100%, 14%);
+    --card:hsl(29, 65%, 12%);           /* 3 */
+    --card-foreground:hsl(28, 100%, 14%);   /* 4 */
 
-    --border: hsl(25, 63%, 30%);
-    --text:hsl(26, 100%, 67%);
+    --selected-background:hsl(28, 100%, 17%);            /* 5 */
+    --selected-border:hsl(27, 79%, 22%);
+    --border: hsl(25, 63%, 30%);            /* 7 */ 
+    --ring: hsl(25, 63%, 30%) ;
+    
+    
+    --low-contrast-text:hsl(26, 100%, 67%); /* 11 */
+    --high-contrast-text:hsl(30, 100%, 88%);
 }
+
+
+/*
+1  App background
+2  Subtle background
+3  UI element background
+4  Hovered UI element background
+5  Active / Selected UI element background
+6  Subtle borders and separators
+7  UI element border and focus rings
+8  Hovered UI element border
+9  Solid backgrounds
+10 Hovered solid backgrounds
+11  Low-contrast text
+12  High-contrast text
+*/
