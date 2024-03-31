@@ -1,11 +1,129 @@
 ---
 
-
+import { Icon } from 'astro-icon/components'
 import '../styles/header.css'
 import '../styles/global.css'
 
 
-interface Props{
+interface Props {
+	file:string;
 }
 
+const { file } = Astro.props;
+
 ---
+
+<section id = "skills"class = "skills">
+    <p class = "title">Skills</p>
+    <div class="test">
+        <div class = "programming">
+            <p style="font-weight: bolder; color:var(--low-contrast-text);">Programming langages</p>
+            <ul>
+                <p><Icon class="icon" name={"mdi:language-python"}/> Python</p>
+                <p><Icon class="icon" name={"mdi:language-csharp"}/> Windows Form</p>
+                <p><Icon class="icon" name={"mdi:language-javascript"}/> JavaScript</p>
+            </ul>
+        </div>
+       <div class = "framework">
+        <p style="font-weight: bolder; color:var(--low-contrast-text);">Framework</p>
+            <ul>
+                <p><Icon class="icon" name={"mdi:language-python"}/> Python</p>
+                <p><Icon class="icon" name={"mdi:language-csharp"}/> Windows Form</p>
+                <p><Icon class="icon" name={"mdi:language-javascript"}/> JavaScript</p>
+            </ul>
+        </div>
+        <div class = "database">
+            <p style="font-weight: bolder; color:var(--low-contrast-text);">Database</p>
+            <ul>
+                <p><Icon class="icon" name={"mdi:language-python"}/> Python</p>
+                <p><Icon class="icon" name={"mdi:language-csharp"}/> Windows Form</p>
+                <p><Icon class="icon" name={"mdi:language-javascript"}/> JavaScript</p>
+            </ul>
+        </div>
+        <div class = "others">
+            <p style="font-weight: bolder; color:var(--low-contrast-text);">Others</p>
+            <ul>
+                <p><Icon class="icon" name={"mdi:language-python"}/> Python</p>
+                <p><Icon class="icon" name={"mdi:language-csharp"}/> Windows Form</p>
+                <p><Icon class="icon" name={"mdi:language-javascript"}/> JavaScript</p>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+
+ul{
+    padding-left: 1.4rem;
+}
+    .icon{
+        position: relative;
+        top:2px;
+    }
+    .test{
+        position: relative;
+        display: flex; /* Utilisation de flexbox pour centrer verticalement */
+        align-items: center; /* Aligner les éléments verticalement au centre */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title{
+        font-weight: bolder;
+        text-align: center; /* Aligner le texte au centre horizontalement */
+        position: relative;
+
+    }
+
+    .skills
+    {
+        position: relative;
+        font-family: 'Ledger';
+
+        color:var(--low-contrast-text);
+        top: 1000px;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .programming
+    {
+        color:var(--high-contrast-text);
+        position: relative;
+        margin-left: 4%;
+        padding:10px;
+        font-size: 20px;
+        
+    }
+
+    .framework
+    {
+        color:var(--high-contrast-text);
+
+        position: relative;
+        margin-left: 10%;
+        font-size: 20px;
+
+        
+    }
+
+    .database
+    {
+        color:var(--high-contrast-text);
+        position: relative;
+        margin-left: 10%;
+        font-size: 20px; 
+    }
+
+
+    .others
+    {
+        color:var(--high-contrast-text);
+        position: relative;
+        margin-left: 10%;
+        font-size: 20px; 
+    }
+    
+</style>

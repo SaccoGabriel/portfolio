@@ -12,22 +12,20 @@ interface Props {
   title: string;
   subtitle: string;
   job: string;
-  body: string;
 }
 
-const { name, title, subtitle, body, job } = Astro.props;
+const { name, title, subtitle, job } = Astro.props;
 ---
 
+<NavigationBar/>
 <div class= "header">
-  <NavigationBar/>
-
   <div class="presentation">
-    <h1 class="title">
+    <div class="title">
       {title}
-    </h1>
-    <h1 class="name">
+    </div>
+    <div class="name">
       {name}
-    </h1>
+    </div>
     <div class="description">
       <span style="font-weight:bolder;">{subtitle}</span>
       {" " + job}
@@ -51,9 +49,10 @@ const { name, title, subtitle, body, job } = Astro.props;
       />
     </div>
   </div>
-
   <div class="picture">
     <Profil file="Photo_Gabriel_SACCO.jpg" />
   </div>
+
+
 </div>
 

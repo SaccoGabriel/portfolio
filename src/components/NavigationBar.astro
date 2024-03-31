@@ -1,35 +1,31 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 
-interface Props {
-    
+interface Props {}
 
-}
-
-const{} = Astro.props;
+const {} = Astro.props;
 ---
 
-<div >
-    <a class="topnav" href="about">2. <span style='color:white'>About</span></a>
-    <a class="topnav" href="project">1. <span style='color:white'>Projets</span></a>
-    <a class="topnav" href="skills">0. <span style='color:white'>Skills</span></a>
-   
-
+<div>
+  <a class="topnav" href="about">2. <span style="color:white">About</span></a>
+  <a class="topnav" href="project"
+    >1. <span style="color:white">Projets</span></a
+  >
+  <a class="topnav" href="#skills">0. <span style="color:white">Skills</span></a
+  >
 </div>
 
-
 <style>
-    .topnav{
-        position: relative;
-        top:50px;
-        right: 100px;
-        float: right;
-        margin-right: 15px;
-        text-underline-offset:inherit;
-        text-decoration:none;
-        border-radius: 20px;
-        font-family: 'Ledger';
-        color: var(--low-contrast-text);
-    }
-
+  .topnav {
+    position: relative;
+    top: 50px;
+    right: 100px;
+    float: right;
+    margin-right: 15px;
+    text-underline-offset: inherit;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Ledger";
+    color: var(--low-contrast-text);
+  }
 </style>

@@ -1,130 +1,109 @@
   .header {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    top: 150px;
+
     display: flex;
-    flex-direction: column;
+    /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    flex-wrap: wrap;
   }
-  .picture {
-    position: absolute;
-    top: 20%;
-    left: 70%;
 
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
-  }
   .presentation {
-    max-width: 70%;
-    position: absolute;
-    top: 30%;
-    left: 150px;
+    max-height: 300px;
+    flex: 1;
+    position: relative;
+    left: 70px;
+    top: 30px;
+    align-items: center;
+    /* Centrer verticalement */
   }
 
-  .title {
+  .picture {
+    flex: 1;
+    position: relative;
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
-    margin: 0;
-    font-size: 25px;
-  }
+    max-height: 300px;
+    text-align: center;
+    /* Centrer l'image horizontalement */
 
-  
+
+  }
 
   @keyframes appear {
     0% {
-      opacity: 0; /* Commencez avec une opacité à 0 pour le texte invisible */
+      opacity: 0;
+      /* Commencez avec une opacité à 0 pour le texte invisible */
     }
 
     100% {
-      opacity: 1; /* Finissez avec une opacité à 1 pour le texte visible */
+      opacity: 1;
+      /* Finissez avec une opacité à 1 pour le texte visible */
     }
   }
 
   .name {
-    font-family: "Fjord One";
     position: relative;
     left: 2%;
-    font-weight: bolder;
-    font-size: 150%;
     margin: 0;
+
+    font-family: "Fjord One";
+    font-weight: bolder;
+    font-size: 350%;
 
     background-image: var(--accent-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+    background-size: 200%;
+
 
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
   }
 
   .description {
-    font-family: "Ledger";
-    font-size: 15px;
-    color: white;
     position: relative;
-    max-width: 70%;
+    max-width: 100%;
+
+    font-family: "Ledger";
+    font-size: 140%;
+    color: white;
+
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
   }
 
   .container {
-    align-items: center; /* Aligner les éléments verticalement au centre */
+    align-items: center;
+    /* Aligner les éléments verticalement au centre */
     display: flex;
     flex-wrap: wrap;
-    font-size: 10px;
+    font-size: 100%;
 
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
   }
 
-  h1 {
+  .title {
     color: white;
     position: relative;
     font-weight: lighter;
     font-style: italic;
+
+    animation: appear 1s ease-in-out;
+    animation-delay: 0s;
+    margin: 0;
+    font-size: 180%;
   }
 
-  h2 {
-    color: white;
-    position: relative;
-    font-weight: lighter;
-  }
 
-  @media screen and (min-width: 768px) {
-    .title{
-      font-size: 200%; /* Taille de la police fixe pour les écrans de 768px ou plus */
-    }
-    .presentation{
-        max-width: 55%;
-      font-size: 100%; /* Taille de la police fixe pour les écrans de 768px ou plus */
-    }
-    .name{
-      font-size: 450%; /* Taille de la police fixe pour les écrans de 768px ou plus */
-    }
-    .description{
-      font-size: 25px; /* Taille de la police fixe pour les écrans de 768px ou plus */
-    }
-    .container{
-      font-size: 15px;
-    }
-    .header
+  @media screen and (max-width:1000px) {
+    .presentation
     {
-      left: 5px;
+      width: 80%;
+      font-size: 0.8em;
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    .header
-    {
-        flex-direction: column; /* Changer la direction de flexbox pour empiler les éléments verticalement */
-
-    }
-    .presentation{
-        left: 30px;
-        top:20%;
-
-    }
-    .picture {
-        position: absolute;
-        top: 20%;
-        right:10%;
-    }
   }

@@ -14,8 +14,28 @@ const { file } = Astro.props;
 
 img{
     clip-path: circle(45% at center); /* Découpe l'image en forme de cercle */
-    width: 60%;
-    height: 60%;
+    max-width: 100%;
+    max-height:100%;
+    text-align: center;
+    
+}
+@media screen and (max-width: 1000px) {
+
+img{
+    width: 40%;
+    max-width: 100%;
+    height: auto; /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */    
+
 }
 
+@media screen and (max-width: 500px) {
+
+img{
+    width: 10%;
+    max-width: 100%;
+    height: auto; /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */    
+
+}
+
+}
 </style>
