@@ -7,25 +7,37 @@
     display: flex;
     /* Utilisation de flexbox pour aligner les éléments horizontalement */
     flex-wrap: wrap;
+
+    opacity: 0; /* Texte invisible par défaut */
+    transition: opacity 0.3s ease; /* Transition de l'opacité */
+
   }
 
+  .header.visible{
+    opacity: 1;
+  }
+
+
   .presentation {
+    width:100%;
     max-height: 300px;
     flex: 1;
     position: relative;
-    left: 70px;
-    top: 30px;
+    left: 10%;
+    top: 10%;
     align-items: center;
     /* Centrer verticalement */
   }
 
   .picture {
     flex: 1;
+    right: 10%;
+    top:10%;
     position: relative;
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
     max-height: 300px;
-    text-align: center;
+    text-align: right;
     /* Centrer l'image horizontalement */
 
 
@@ -50,7 +62,7 @@
 
     font-family: "Fjord One";
     font-weight: bolder;
-    font-size: 350%;
+    font-size: 56px;
 
     background-image: var(--accent-gradient);
     background-clip: text;
@@ -64,11 +76,9 @@
   }
 
   .description {
-    position: relative;
-    max-width: 100%;
-
+    position: relative; 
     font-family: "Ledger";
-    font-size: 140%;
+    font-size: 25px;
     color: white;
 
     animation: appear 1s ease-in-out;
@@ -76,11 +86,12 @@
   }
 
   .container {
+    
     align-items: center;
     /* Aligner les éléments verticalement au centre */
     display: flex;
     flex-wrap: wrap;
-    font-size: 100%;
+    font-size: 16px;
 
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
@@ -95,15 +106,59 @@
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
     margin: 0;
-    font-size: 180%;
+    font-size: 29px;
   }
 
-
-  @media screen and (max-width:1000px) {
-    .presentation
+ 
+  
+  @media screen and (max-width:1000px) and (min-width:500px){
+    .name
     {
-      width: 80%;
-      font-size: 0.8em;
+      font-size: 5.5vw;
     }
 
+    .title
+    {
+      font-size: 3vw;
+    }
+
+    .description
+    {
+      font-size: 2.5vw;
+    }
+
+    .container{
+      font-size: 1.6vw;
+    }
+    .header{
+      top:100px;
+    }
+
+  }
+
+    
+  @media screen and (max-width:500px) {
+    .name
+    {
+      
+      font-size: 25px;
+    }
+
+    .title
+    {
+      font-size: 15px;
+    }
+
+    .description
+    {
+      font-size: 13px;
+    }
+
+    .container{
+      font-size: 8px;
+    }
+    .header{
+      top:50px;
+ 
+    }
   }

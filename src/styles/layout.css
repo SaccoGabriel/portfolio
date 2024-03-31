@@ -14,4 +14,7 @@
 html {
     background: var(--background);
     background-size: 224px;
+    min-width: 300px;
+
 }
+

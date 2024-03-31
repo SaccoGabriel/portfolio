@@ -13,7 +13,7 @@ const { file } = Astro.props;
 
 ---
 
-<section id = "skills"class = "skills">
+<section id = "skills" class = "skills">
     <p class = "title">Skills</p>
     <div class="test">
         <div class = "programming">
@@ -52,7 +52,25 @@ const { file } = Astro.props;
 </section>
 
 
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio>=0.5) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  })
+}, {
+  threshold: [0.5]
+})
 
+const hiddenElement = document.querySelectorAll('.skills')
+hiddenElement.forEach(el => observer.observe(el))
+
+</script>
+
+</script>
 <style>
 
 ul{
@@ -81,12 +99,19 @@ ul{
     {
         position: relative;
         font-family: 'Ledger';
-
+        top:150px;
         color:var(--low-contrast-text);
-        top: 1000px;
         margin-right: 10%;
         margin-left: 10%;
-    }
+    
+
+        opacity: 0; /* Texte invisible par défaut */
+        transition: opacity 0.3s ease; /* Transition de l'opacité */
+  }
+
+  .skills.visible{
+    opacity: 1; /* Texte visible lorsque la classe 'visible' est appliquée */
+  }
 
     .programming
     {

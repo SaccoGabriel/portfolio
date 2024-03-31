@@ -18,7 +18,7 @@ const { name, title, subtitle, job } = Astro.props;
 ---
 
 <NavigationBar/>
-<div class= "header">
+<section id = "header" class= "header">
   <div class="presentation">
     <div class="title">
       {title}
@@ -52,7 +52,21 @@ const { name, title, subtitle, job } = Astro.props;
   <div class="picture">
     <Profil file="Photo_Gabriel_SACCO.jpg" />
   </div>
+</section>
 
+<script>
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  })
+}, {
+  threshold: [0.5]
+})
 
-</div>
-
+const hiddenElement = document.querySelectorAll('.header')
+hiddenElement.forEach(el => observer.observe(el))
+</script>
