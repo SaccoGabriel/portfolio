@@ -5,11 +5,10 @@
     top: 150px;
 
     display: flex;
-    /* Utilisation de flexbox pour aligner les éléments horizontalement */
-    flex-wrap: wrap;
+    flex-direction: row;
 
-    opacity: 0; /* Texte invisible par défaut */
-    transition: opacity 0.3s ease; /* Transition de l'opacité */
+    animation: appear 1s ease-in-out;
+    animation-delay: 0s;
 
   }
 
@@ -19,11 +18,11 @@
 
 
   .presentation {
+    position: relative;
     width:100%;
     max-height: 300px;
     flex: 1;
-    position: relative;
-    left: 10%;
+    padding-left: 10%;
     top: 10%;
     align-items: center;
     /* Centrer verticalement */
@@ -31,13 +30,12 @@
 
   .picture {
     flex: 1;
-    right: 10%;
-    top:10%;
+    top:5%;
     position: relative;
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
     max-height: 300px;
-    text-align: right;
+    text-align: center;
     /* Centrer l'image horizontalement */
 
 
@@ -57,12 +55,10 @@
 
   .name {
     position: relative;
-    left: 2%;
-    margin: 0;
+    left: 5%;
 
     font-family: "Fjord One";
     font-weight: bolder;
-    font-size: 56px;
 
     background-image: var(--accent-gradient);
     background-clip: text;
@@ -70,19 +66,13 @@
     -webkit-text-fill-color: transparent;
     background-size: 200%;
 
-
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
   }
 
   .description {
     position: relative; 
     font-family: "Ledger";
-    font-size: 25px;
     color: white;
 
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
   }
 
   .container {
@@ -91,10 +81,7 @@
     /* Aligner les éléments verticalement au centre */
     display: flex;
     flex-wrap: wrap;
-    font-size: 16px;
 
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
   }
 
   .title {
@@ -103,62 +90,74 @@
     font-weight: lighter;
     font-style: italic;
 
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
-    margin: 0;
-    font-size: 29px;
-  }
-
- 
-  
-  @media screen and (max-width:1000px) and (min-width:500px){
-    .name
-    {
-      font-size: 5.5vw;
-    }
-
-    .title
-    {
-      font-size: 3vw;
-    }
-
-    .description
-    {
-      font-size: 2.5vw;
-    }
-
-    .container{
-      font-size: 1.6vw;
-    }
-    .header{
-      top:100px;
-    }
-
   }
 
     
-  @media screen and (max-width:500px) {
+  @media (orientation: portrait) {
+
+    .header
+    {
+      top:50px;
+      flex-direction: column;
+    }
+
+    .picture{
+      
+      margin-top: 5%;
+      height: 45vw;
+      width: 100%; /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */    
+  
+    }
+
+    .presentation{
+      width:80%;
+
+    }
     .name
     {
-      
-      font-size: 25px;
+      font-size: 2.5em;
     }
 
     .title
     {
-      font-size: 15px;
+      font-size: 2em;
     }
 
     .description
     {
-      font-size: 13px;
+      font-size: 1.3em;
     }
 
     .container{
-      font-size: 8px;
+      font-size: 1.1em;
+    }
+
+
+
+  }
+
+  @media (orientation: landscape) {
+    .name
+    {
+      font-size: 3.5em;
+    }
+
+    .title
+    {
+      font-size: 2.5em;
+    }
+
+    .description
+    {
+      font-size: 2em;
+    }
+
+    .container{
+      font-size: 1.5em;
     }
     .header{
-      top:50px;
- 
+        flex-direction: row;    
     }
+
+
   }

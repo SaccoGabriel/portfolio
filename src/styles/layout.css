@@ -8,13 +8,13 @@
         rgb(var(--accent-light)) 30%,
         white 60%
     );
+    background: var(--background);
 
 }
 
-html {
-    background: var(--background);
-    background-size: 224px;
-    min-width: 300px;
+html, body {
+    height: 100%;
+    width:100%;
 
 }
 

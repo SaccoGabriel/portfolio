@@ -52,25 +52,32 @@ const { file } = Astro.props;
 </section>
 
 
-<script>
+<!--<script>
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.intersectionRatio>=0.5) {
-      entry.target.classList.add('visible')
-    } else {
-      entry.target.classList.remove('visible')
+    if (entry.isIntersecting) {
+        if (entry.target.id === 'header')
+        {
+        document.getElementById('header').classList.add('visible');
+        document.getElementById('skills').classList.remove('visible');
+        }  
+        if (entry.target.id === 'skills'){
+        document.getElementById('header').classList.remove('visible');
+        document.getElementById('skills').classList.add('visible');
+        }   
     }
   })
 }, {
   threshold: [0.5]
 })
 
-const hiddenElement = document.querySelectorAll('.skills')
-hiddenElement.forEach(el => observer.observe(el))
+observer.observe(document.getElementById('header'));
+observer.observe(document.getElementById('skills'));
 
 </script>
+!-->
 
-</script>
+
 <style>
 
 ul{
@@ -104,9 +111,6 @@ ul{
         margin-right: 10%;
         margin-left: 10%;
     
-
-        opacity: 0; /* Texte invisible par défaut */
-        transition: opacity 0.3s ease; /* Transition de l'opacité */
   }
 
   .skills.visible{
