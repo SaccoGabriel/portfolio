@@ -7,39 +7,43 @@
 h3
 {
     font-weight: bolder; 
-    font-size: 30px;
+    min-height:25%;
+    font-size: 1.5em;
     color:var(--low-contrast-text);
-    
-
-
+    margin: auto;
 }
+
 .skills
 {
     position: relative;
     display:flex;
     flex-wrap: wrap;
-    text-align: center; /* Aligner le texte au centre horizontalement */
 
-    font-family: 'Ledger';
+    text-align: center; /* Aligner le texte au centre horizontalement */
+;   font-family: 'Ledger';
     color:var(--low-contrast-text);
-    
 
 }
 
 .skillSection
 {
     width:20%;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 2% 0px 2%;
     color:var(--high-contrast-text);
-    position: relative;   
+    
 }
-.test{
 
+.skillSection p
+{
+    font-size: 1.2em;  
+}
+
+.test{
+    width: 100%;
     position: relative;
     display: flex; /* Utilisation de flexbox pour centrer verticalement */
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 0 0 0;
 
 
 }

@@ -4,6 +4,7 @@ import Profil from "../components/Profil.astro";
 import NavigationBar from "../components/NavigationBar.astro";
 
 import '../styles/header.css'
+import '../styles/global.css'
 
 
 interface Props {
@@ -49,6 +50,23 @@ const { name, title, subtitle, job } = Astro.props;
     </div>
   </div>
   <div class="picture">
-    <Profil file="GS.jpg"/> <!--Photo_Gabriel_SACCO.jpg" /> !-->
+    <Profil file="GS.jpg" />
   </div>
 </section>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible')
+    } else {
+      entry.target.classList.remove('visible')
+    }
+  })
+}, {
+  threshold: [0.5]
+})
+
+const hiddenElement = document.querySelectorAll('.header')
+hiddenElement.forEach(el => observer.observe(el))
+</script>
