@@ -17,6 +17,26 @@
     
 }
 
+:root {
+
+    --accent: 255, 160, 87;
+    --accent-light: 255, 224, 194;
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+    background: var(--background);
+
+}
+
+html, body {
+    height: 100%;
+    width:100%;
+
+}
+
 
 
 /*

@@ -1,0 +1,101 @@
+
+.icon{
+    position: relative;
+    top:2px;
+}
+
+h3
+{
+    font-weight: bolder; 
+    font-size: 30px;
+    color:var(--low-contrast-text);
+    
+
+
+}
+.skills
+{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center; /* Aligner le texte au centre horizontalement */
+
+    font-family: 'Ledger';
+    color:var(--low-contrast-text);
+    
+
+}
+
+.skillSection
+{
+    width:20%;
+    padding: 0px 15px 0px 15px;
+    color:var(--high-contrast-text);
+    position: relative;   
+}
+.test{
+
+    position: relative;
+    display: flex; /* Utilisation de flexbox pour centrer verticalement */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 0;
+
+
+}
+
+.title
+{
+    position: relative;
+    width:100%;
+    font-weight: bolder;
+
+}
+
+.programming
+{
+    padding: 5px;
+    color:var(--high-contrast-text);
+    position: relative;
+    font-size: 20px;    
+}
+
+
+
+.framework
+{
+    color:var(--high-contrast-text);
+    position: relative;
+    font-size: 20px;
+
+    
+}
+
+.database
+{
+    color:var(--high-contrast-text);
+    position: relative;
+    font-size: 20px; 
+}
+
+.others
+{
+    color:var(--high-contrast-text);
+    position: relative;
+    font-size: 20px; 
+}
+
+@media (orientation: landscape)
+{
+    .skills{
+        top:300px;
+    }
+}
+@media (orientation: portrait) {
+
+    .skills
+    {
+        margin-top: 10%;
+        top:100px;
+    }
+}
