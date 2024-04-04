@@ -1,37 +1,35 @@
 
 .icon{
     position: relative;
-    top:2px;
+    top:3px;
 }
 
 h3
 {
     font-weight: bolder; 
-    font-size: 30px;
+    font-size: 1.7em;
     color:var(--low-contrast-text);
-    
-
-
+   
 }
 .skills
 {
     position: relative;
-    display:flex;
-    flex-wrap: wrap;
+    top:250px;
     text-align: center; /* Aligner le texte au centre horizontalement */
-
-    font-family: 'Ledger';
     color:var(--low-contrast-text);
-    
+
 
 }
 
 .skillSection
 {
-    width:20%;
-    padding: 0px 15px 0px 15px;
+    width: auto;
+    padding: 0px 4.7vw 0px 4.7vw;
     color:var(--high-contrast-text);
-    position: relative;   
+}
+.skillSection p
+{
+    font-size: 1.4em;
 }
 .test{
 
@@ -39,63 +37,35 @@ h3
     display: flex; /* Utilisation de flexbox pour centrer verticalement */
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 0 0 0;
-
-
 }
 
-.title
+.skillsTitle
 {
+    font-size:2.2em;
+    color:white;
     position: relative;
     width:100%;
     font-weight: bolder;
 
 }
 
-.programming
-{
-    padding: 5px;
-    color:var(--high-contrast-text);
-    position: relative;
-    font-size: 20px;    
-}
-
-
-
-.framework
-{
-    color:var(--high-contrast-text);
-    position: relative;
-    font-size: 20px;
-
-    
-}
-
-.database
-{
-    color:var(--high-contrast-text);
-    position: relative;
-    font-size: 20px; 
-}
-
-.others
-{
-    color:var(--high-contrast-text);
-    position: relative;
-    font-size: 20px; 
-}
-
-@media (orientation: landscape)
+@media screen and (max-width: 900px)
 {
     .skills{
-        top:300px;
+        top:150px;
     }
 }
-@media (orientation: portrait) {
 
-    .skills
-    {
-        margin-top: 10%;
-        top:100px;
+@media screen and (max-width: 500px)
+{
+    .skillSection{
+        font-size:  0.8em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    .skillsTitle{
+        font-size:1.9em;
+
     }
 }

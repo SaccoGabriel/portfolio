@@ -13,12 +13,21 @@
 
   .presentation {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width:100%;
-    max-height: 300px;
     flex: 1;
     padding-left: 10%;
-    align-items: center;
-    /* Centrer verticalement */
+
+  }
+
+  .title {
+    position: relative;
+    font-size: 2.2rem;
+    color: white;
+    font-weight: lighter;
+    font-style: italic;  
+ 
   }
 
   .picture {
@@ -48,15 +57,17 @@
   .name {
     position: relative;
     left: 5%;
-    float: left;
     font-family: "Fjord One";
     font-weight: bolder;
-
+    white-space: nowrap;
+    overflow: hidden;
     background-image: var(--accent-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
+
+    font-size : clamp(4em, 6vw, 5em);
 
   }
 
@@ -64,32 +75,29 @@
     position: relative; 
     font-family: "Ledger";
     color: white;
-    float: left;
+    width: 80%;
+    left: 5%;
 
+    font-size : clamp(1.5em, 2.4vw, 2em); 
   }
 
   .container {
-    
-    align-items: center;
     /* Aligner les éléments verticalement au centre */
+    position: relative;   
     display: flex;
+    left: 4%;
+    top:5%;
+    width:80%;
     flex-wrap: wrap;
-    float: left;
+    font-size : clamp(1.2em, 1.7vw, 1.4em);
 
-
-  }
-
-  .title {
-    color: white;
-    position: relative;
-    font-weight: lighter;
-    font-style: italic;
-    float: left;
     
   }
 
+
+
     
-  @media (orientation: portrait) {
+  @media screen and (max-width: 900px) {
 
     .header
     {
@@ -104,57 +112,32 @@
       width: 100%; /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */    
   
     }
-
-    .presentation{
-      width:80%;
-
-    }
-    .name
-    {
-      font-size: 2.5em;
-    }
-
-    .title
-    {
-      font-size: 2em;
-    }
-
-    .description
-    {
-      font-size: 1.3em;
-    }
-
-    .container{
-      font-size: 1.1em;
-    }
-
+    
     .picture img{
-      max-width: 50%;
-      max-height: 50%;
+      max-width: 40%;
+      max-height: 40%;
+      text-size-adjust: auto;
     }
-
-
 
   }
 
-  @media (orientation: landscape) {
+  @media screen and (max-width: 500px) {
     .name
     {
-      font-size: 3.5em;
-    }
+      font-size: clamp(2.3em, 12vw, 5em);
 
+    }
     .title
     {
-      font-size: 2.5em;
+      font-size: clamp(1.7em, 8vw, 2.2em);
     }
-
     .description
     {
-      font-size: 2em;
+      font-size: clamp(1.2em, 5vw,2em);
     }
-
     .container{
-      font-size: 1.5em;
+      font-size : clamp(1em, 2vw, 5em);
+
     }
 
   }
