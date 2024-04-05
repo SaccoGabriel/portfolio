@@ -37,6 +37,18 @@ html, body {
 
 }
 
+.sectionTitle
+{
+    font-size:1.8em;
+    color:white;
+    position: relative;
+    width:100%;
+    font-weight: bolder;
+    text-align: center; /* Aligner le texte au centre horizontalement */
+
+
+}
+
 
 
 /*

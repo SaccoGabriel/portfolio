@@ -1,0 +1,45 @@
+---
+import Link from "./Link.astro";
+
+import '../styles/header.css'
+import '../styles/global.css'
+import { Icon } from 'astro-icon/components'
+
+
+interface Props {
+  iconOrText: string;
+  title: string;
+  description: string;
+  tags: string;
+}
+
+const { iconOrText, title, description, tags } = Astro.props;
+
+---
+
+<div class="title">
+    {iconOrText}
+</div>
+<div class="name">
+    {title}
+</div>
+<div class="description">
+    <span style="font-weight:bolder;">{description}</span>
+</div>
+<div class="container">
+    <Link
+    icon="mdi:github"
+    title="Github"
+    href="https://github.com/SaccoGabriel"
+    />
+    <Link
+    icon="mdi:linkedin"
+    title="Linkedin"
+    href="https://www.linkedin.com/in/gabriel-sacco"
+    />
+    <Link
+    icon="mdi:email"
+    title="gabriel.sacco74@gmail.com"
+    href="mailto:gabriel.sacco74@gmail.com"
+    />
+</div>

@@ -7,8 +7,7 @@
 h3
 {
     font-weight: bolder; 
-
-    font-size: 1.7em;
+    font-size: 1.3em;
     color:var(--low-contrast-text);
    
 
@@ -17,32 +16,31 @@ h3
 .skills
 {
     position: relative;
-
     display:flex;
     flex-wrap: wrap;
-
+    top:250px;
     text-align: center; /* Aligner le texte au centre horizontalement */
     font-family: 'Ledger';
     color:var(--low-contrast-text);
 
 }
 
-.skillSection
+.skillTemplate
 {
-    font-size: 1.4em;
+    font-size: 1.1em;
 
-    width:20%;
-    padding: 0px 2% 0px 2%;
+    width:auto;
+    padding: 0px 5vw 0px 5vw;
     color:var(--high-contrast-text);
 
 }
 
-.skillSection p
+.skillTemplate p
 {
     font-size: 1.2em;  
 }
 
-.test{
+.skillsContent{
     width: 100%;
     position: relative;
     display: flex; /* Utilisation de flexbox pour centrer verticalement */
@@ -50,15 +48,6 @@ h3
     justify-content: center;
 }
 
-.skillsTitle
-{
-    font-size:2.2em;
-    color:white;
-    position: relative;
-    width:100%;
-    font-weight: bolder;
-
-}
 
 @media screen and (max-width: 900px)
 {
@@ -69,14 +58,14 @@ h3
 
 @media screen and (max-width: 500px)
 {
-    .skillSection{
+    .skillTemplate{
         font-size:  0.8em;
     }
     h3{
         font-size: 1.5em;
     }
-    .skillsTitle{
-        font-size:1.9em;
+    .sectionTitle{
+        font-size:1.6em;
 
     }
 }

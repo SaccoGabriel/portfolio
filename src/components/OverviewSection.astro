@@ -1,7 +1,7 @@
 ---
-import Link from "../components/Link.astro";
-import Profil from "../components/Profil.astro";
-import NavigationBar from "../components/NavigationBar.astro";
+import Link from "./Link.astro";
+import NavigationBar from "./NavigationBar.astro";
+import HeaderCell from "./HeaderCell.astro";
 
 import '../styles/header.css'
 import '../styles/global.css'
@@ -19,6 +19,7 @@ const { name, title, subtitle, job } = Astro.props;
 
 <NavigationBar/>
 <section id = "header" class= "header">
+  <!--<HeaderCell iconOrText={title}, title = {name}, description = {subtitle}, tags = {job}/>  -->
   <div class="presentation">
     <div class="title">
       {title}
@@ -49,23 +50,6 @@ const { name, title, subtitle, job } = Astro.props;
     </div>
   </div>
   <div class="picture">
-    <Profil file="GS.jpg" />
+    <img src=GS.jpg></img>
   </div>
 </section>
-
-<script>
-  const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible')
-    } else {
-      entry.target.classList.remove('visible')
-    }
-  })
-}, {
-  threshold: [0.5]
-})
-
-const hiddenElement = document.querySelectorAll('.header')
-hiddenElement.forEach(el => observer.observe(el))
-</script>
