@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OverviewSection from '../components/OverviewSection.astro';
+import Skills from '../components/SkillSection.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+
+
+---
+
+<Layout title="First Project">
+	<main>
+		<div>
+			<OverviewSection
+				title="Salut l'ékip, c'est -"
+				name="Gabriel SACCO"
+				subtitle="Aspirant développeur web."
+				job="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			/>
+		</div>
+	</main>
+</Layout>
+
+<style>
+
+	.text-gradient {
+		background-image: var(--background);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		color:white;
+		background-position: 0%;
+	}
+
+</style>
+

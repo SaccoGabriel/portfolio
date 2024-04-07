@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+import Link from "./Link.astro";
 
 
 interface Props {
@@ -15,26 +16,65 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
 ---
 <div class ="projectTemplate">
     <div><Icon class = "projectIcon" name={projectIcon}/>
+    <a style = "color: white" href = "FirstProject"><Icon class = "projectIcon" style = "float:right" name="mdi:open-in-new"/></a>
     </div>
-    <div>{projectTitle}</div>
-    <p>{projectContent}</p>
-    <div>{projectLinkedSkills}</div>
+    <h3 style="margin-bottom:1px; color: white;">{projectTitle}</h3>
+    <p class = "projectContent">{projectContent}</p>
+    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
+    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
+    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
+    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
+
+    
 </div>
 <style>
 
+
+.tagIcon
+{
+    position: relative;
+    top:2px;
+    color:white;
+
+}
 .projectIcon
 {    
-    text-align: left;
+    position: relative;
+    top:15px;
+    font-size: 1.5em;
+    color:white;
 }
 
+.projectContent
+{
+    position:relative;
+    font-size: 1em;
+    margin: 10px 0px 15px 0px;
+}
+
+.projectLinkedSkills{
+
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    width:auto;
+    font-size:0.9em;
+    text-underline-offset:inherit;
+    text-decoration:none;
+    border-radius: 20px;
+    background-color: var(--ring);
+    color: var(--high-contrast-text);
+    margin-bottom: 5px;
+     
+}
 .projectTemplate
 {
-    font-size: 1.1em;
+    background-color: var(--selected-background);
     width:100%;
-    max-width: 150px; 
+    
+    max-width: 300px; 
     height:50%;
-    padding: 0px 5vw 0px 5vw;
-    background-color:red;
+    padding: 0px 10px 0px 10px;
     border-radius: 20px;
     margin: 0px 10px 10px 10px;
     }
