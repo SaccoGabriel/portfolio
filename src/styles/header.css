@@ -1,28 +1,42 @@
-  .header {
+  .overview {
     position: relative;
+    background: var(--foreground);
+    height: auto;
+    /* Par défaut, la hauteur de la div parente s'ajustera à la taille de ses enfants */
     width: 100%;
-    top: 200px;
-
-    display: flex;
-    flex-direction: row;
-
-    animation: appear 1s ease-in-out;
-    animation-delay: 0s;
+    height: 100vh;
 
   }
 
-  img{
-    clip-path: circle(45% at center); /* Découpe l'image en forme de cercle */
+  .header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centre verticalement */
+    top: 10vh;
+    height: 90vh;
+    /* Assurez-vous que la hauteur de la div parente est définie */
+
+    animation: appear 1s ease-in-out;
+    animation-delay: 0s;
+    background: var(--foreground);
+  }
+
+  img {
+    clip-path: circle(45% at center);
+    /* Découpe l'image en forme de cercle */
     max-width: 80%;
     max-height: 80%;
-    
-}
+
+  }
 
   .presentation {
     position: relative;
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     flex: 1;
     padding-left: 10%;
 
@@ -31,10 +45,10 @@
   .title {
     position: relative;
     font-size: 2.2rem;
-    color: white;
+    color: var(--low-contrast-text);
     font-weight: lighter;
-    font-style: italic;  
- 
+    font-style: italic;
+
   }
 
   .picture {
@@ -74,79 +88,80 @@
     -webkit-text-fill-color: transparent;
     background-size: 200%;
 
-    font-size : clamp(3.3em, 5vw, 5em);
+    font-size: clamp(3.3em, 5vw, 5em);
 
   }
 
   .description {
-    position: relative; 
+    position: relative;
     font-family: "Ledger";
-    color: white;
+    color: var(--low-contrast-text);
     width: 100%;
     left: 5%;
 
-    font-size : clamp(1.5em, 2.4vw, 2em); 
+    font-size: clamp(1.5em, 2.4vw, 2em);
   }
 
   .container {
     /* Aligner les éléments verticalement au centre */
-    position: relative;   
+    position: relative;
     display: flex;
     left: 4%;
-    top:5%;
-    width:80%;
+    top: 5%;
+    width: 80%;
     flex-wrap: wrap;
-    font-size : clamp(1em, 1.7vw, 1.3em);
+    font-size: clamp(1em, 1.7vw, 1.3em);
 
-    
+
   }
 
 
 
-    
+
   @media screen and (max-width: 900px) {
 
-    .header
-    {
-      top:130px;
+    .header {
+      top: 130px;
       flex-direction: column;
     }
 
-    .picture{
-      
+    .picture {
+
       margin-top: 5%;
-      height: 45vw;
-      width: 100%; /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */    
-  
+      height: 45vh;
+      width: 100%;
+      /* Garantit que l'aspect ratio de l'image est préservé lors du redimensionnement */
+
     }
-    
-    .picture img{
+
+    .picture img {
       max-width: 30%;
       max-height: 30%;
       text-size-adjust: auto;
     }
-    .description{
+
+    .description {
       width: 80%;
 
     }
   }
 
   @media screen and (max-width: 500px) {
-    .name
-    {
+    .name {
       font-size: clamp(2.3em, 10vw, 3.3em);
 
     }
-    .title
-    {
+
+    .title {
       font-size: clamp(1.7em, 8vw, 2.2em);
     }
-    .description
-    {
-      font-size: clamp(1.2em, 5vw,2em);
+
+    .description {
+      font-size: clamp(1.2em, 5vw, 2em);
     }
-    .container{
-      font-size : clamp(1em, 2vw, 5em);
+
+    .container {
+      font-size: clamp(1em, 2vw, 5em);
 
     }
 

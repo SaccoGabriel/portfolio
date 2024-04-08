@@ -15,10 +15,11 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
 
 ---
 <div class ="projectTemplate">
-    <div><Icon class = "projectIcon" name={projectIcon}/>
-    <a style = "color: white" href = "FirstProject"><Icon class = "projectIcon" style = "float:right" name="mdi:open-in-new"/></a>
+    <div>
+        <Icon class = "projectIcon" name={projectIcon}/>
+        <a  href = "FirstProject"><Icon class = "projectIcon" style = "float:right" name="mdi:open-in-new"/></a>
     </div>
-    <h3 style="margin-bottom:1px; color: white;">{projectTitle}</h3>
+    <h3 >{projectTitle}</h3>
     <p class = "projectContent">{projectContent}</p>
     <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
     <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
@@ -29,20 +30,22 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
 </div>
 <style>
 
-
+.projectTemplate h3
+{
+    margin-bottom:1px;
+    color:var(--low-contrast-text);
+}
 .tagIcon
 {
     position: relative;
     top:2px;
-    color:white;
-
+    color: var(--low-contrast-text);
 }
 .projectIcon
 {    
     position: relative;
     top:15px;
     font-size: 1.5em;
-    color:white;
 }
 
 .projectContent
@@ -76,7 +79,7 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
     height:50%;
     padding: 0px 10px 0px 10px;
     border-radius: 20px;
-    margin: 0px 10px 10px 10px;
+    margin: 25.6px 10px 10px 10px;
     }
 
 </style>

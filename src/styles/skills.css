@@ -1,71 +1,68 @@
-
-.icon{
+.icon {
     position: relative;
-    top:3px;
+    top: 3px;
 }
 
-h3
-{
-    font-weight: bolder; 
+h3 {
+    font-weight: bolder;
     font-size: 1.3em;
-    color:var(--low-contrast-text);
-   
+    color: var(--low-contrast-text);
+
 
 }
 
-.skills
-{
+.skills {
     position: relative;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    top:250px;
-    text-align: center; /* Aligner le texte au centre horizontalement */
+    text-align: center;
+    /* Aligner le texte au centre horizontalement */
     font-family: 'Ledger';
-    color:var(--low-contrast-text);
+    color: var(--low-contrast-text);
+
 
 }
 
-.skillTemplate
-{
+.skillTemplate {
     font-size: 1.1em;
 
-    width:auto;
+    width: auto;
     padding: 0px 5vw 0px 5vw;
-    color:var(--high-contrast-text);
+    color: var(--high-contrast-text);
 
 }
 
-.skillTemplate p
-{
-    font-size: 1.2em;  
+.skillTemplate p {
+    font-size: 1.2em;
 }
 
-.skillsContent{
+.skillsContent {
     width: 100%;
     position: relative;
-    display: flex; /* Utilisation de flexbox pour centrer verticalement */
+    display: flex;
+    /* Utilisation de flexbox pour centrer verticalement */
     flex-wrap: wrap;
     justify-content: center;
 }
 
 
-@media screen and (max-width: 900px)
-{
-    .skills{
-        top:150px;
+@media screen and (max-width: 900px) {
+    .skills {
+        top: 150px;
     }
 }
 
-@media screen and (max-width: 500px)
-{
-    .skillTemplate{
-        font-size:  0.8em;
+@media screen and (max-width: 500px) {
+    .skillTemplate {
+        font-size: 0.8em;
     }
-    h3{
+
+    h3 {
         font-size: 1.5em;
     }
-    .sectionTitle{
-        font-size:1.6em;
+
+    .sectionTitle {
+        font-size: 1.6em;
 
     }
 }

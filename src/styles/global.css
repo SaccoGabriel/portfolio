@@ -1,50 +1,55 @@
-:root
-{
-    --background:hsl(27, 24%, 7%);      /* 1 */
-    --foreground:hsl(28, 33%, 9%);      /* 2 */
-    
-    --card:hsl(29, 65%, 12%);           /* 3 */
-    --card-foreground:hsl(28, 100%, 14%);   /* 4 */
+:root {
+    --background: rgba(0, 0, 0, 0.8);
+    /* 1 */
+    --foreground: #FEF7F9;
+    /* 2 */
 
-    --selected-background:hsl(28, 100%, 17%);            /* 5 */
-    --selected-border:hsl(27, 79%, 22%);
-    --border: hsl(25, 63%, 30%);            /* 7 */ 
-    --ring: hsl(25, 63%, 30%) ;
-    
-    
-    --low-contrast-text:hsl(26, 100%, 67%); /* 11 */
-    --high-contrast-text:hsl(30, 100%, 88%);
-    
+    --card: ##FFE9F0;
+    /* 3 */
+    --card-foreground: #E6E7FF;
+    /* 4 */
+
+    --selected-background: #E5004F31;
+    /* 5 */
+    --selected-border: #F8000442;
+    --border: #F4A9AA;
+    /* 7 */
+    --ring: #F4A9AA;
+
+
+    --low-contrast-text: black;
+    /*#FFD3E2FE; /* 11 */
+    --high-contrast-text: #550016E8;
+
 }
 
 :root {
 
-    --accent: 255, 160, 87;
-    --accent-light: 255, 224, 194;
-    --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-    );
+    --accent: 255, 0, 0;
+    --accent-light: 255, 255, 255;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 50%,
+            white 45%);
     background: var(--background);
 
 }
 
-html, body {
+html,
+body {
     height: 100%;
-    width:100%;
-
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.sectionTitle
-{
-    font-size:1.8em;
-    color:white;
+.sectionTitle {
+    font-size: 1.8em;
     position: relative;
-    width:100%;
+    width: 100%;
     font-weight: bolder;
-    text-align: center; /* Aligner le texte au centre horizontalement */
+    text-align: center;
+    /* Aligner le texte au centre horizontalement */
 
 
 }

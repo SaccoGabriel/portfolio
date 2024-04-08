@@ -17,8 +17,11 @@ interface Props {
 const { name, title, subtitle, job } = Astro.props;
 ---
 
-<NavigationBar/>
+<div class = overview>
+  <NavigationBar/>
+
 <section id = "header" class= "header">
+
   <!--<HeaderCell iconOrText={title}, title = {name}, description = {subtitle}, tags = {job}/>  -->
   <div class="presentation">
     <div class="title">
@@ -53,3 +56,5 @@ const { name, title, subtitle, job } = Astro.props;
     <img src=GS.jpg></img>
   </div>
 </section>
+
+</div>
