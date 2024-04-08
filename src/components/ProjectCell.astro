@@ -24,9 +24,7 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
     <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
     <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
     <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
-    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>
-
-    
+    <div class = "projectLinkedSkills"><Icon class = "tagIcon" name="mdi:github"/> {projectLinkedSkills}</div>  
 </div>
 <style>
 
@@ -65,21 +63,22 @@ const { projectTitle, projectIcon, projectContent, projectLinkedSkills} = Astro.
     text-underline-offset:inherit;
     text-decoration:none;
     border-radius: 20px;
-    background-color: var(--ring);
-    color: var(--high-contrast-text);
+    background-color: var(--card-foreground);
+    color: var(---contrast-text);
     margin-bottom: 5px;
      
 }
 .projectTemplate
 {
-    background-color: var(--selected-background);
+    background-color: var(--card);
     width:100%;
+    display: inline-block;
     
     max-width: 300px; 
-    height:50%;
+    max-height: 200px;
     padding: 0px 10px 0px 10px;
     border-radius: 20px;
-    margin: 25.6px 10px 10px 10px;
+    margin: 25.6px 10px 0px 10px;
     }
 
 </style>

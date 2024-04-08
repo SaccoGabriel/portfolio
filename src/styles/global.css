@@ -1,10 +1,10 @@
 :root {
-    --background: rgba(0, 0, 0, 0.8);
+    --background: #D3D3D3;
     /* 1 */
     --foreground: #FEF7F9;
     /* 2 */
 
-    --card: ##FFE9F0;
+    --card: #FFE9F0;
     /* 3 */
     --card-foreground: #E6E7FF;
     /* 4 */
@@ -31,7 +31,6 @@
             rgb(var(--accent)),
             rgb(var(--accent-light)) 50%,
             white 45%);
-    background: var(--background);
 
 }
 
@@ -44,6 +43,7 @@ body {
 }
 
 .sectionTitle {
+    margin : 5vh 0vh 0vh 0vh;
     font-size: 1.8em;
     position: relative;
     width: 100%;
