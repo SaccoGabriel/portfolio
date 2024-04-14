@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+import "../styles/skills.css";
+import "../styles/global.css";
+import ParticlesComponent from "../components/particles.jsx";
+
+
+interface Props {
+  file: string;
+}
+
+const { file } = Astro.props;
+---
+
+<div class ="workState">
+    <div class="app">
+        <ParticlesComponent client:visible />
+    </div>
+    <div class="stateContainer">
+        <div class ="stateTitle">
+            Currently:
+        </div>
+        <div class ="state">Testing Engineer at <span style="color:red">Viveris Technologies</span></div>
+    </div>
+
+<style>
+
+.workState
+{
+    position: relative;
+    width:100%;
+    min-height:50vh;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;    
+}
+
+
+.workState > app{
+    max-height:50vh;
+
+
+}
+
+
+.stateTitle {
+    width:100%;
+    position:relative;
+    color:white;
+    font-size:1.8em;
+    font-weight:bold;
+    text-align: center;
+
+}
+
+.state
+{
+    position:relative;
+    color:white;
+    font-size:1.5em;
+    padding-top:7vh;
+    width:100%;
+    text-align: center;
+    height:auto;
+}
+
+
+</style>

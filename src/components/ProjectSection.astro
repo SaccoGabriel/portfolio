@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 import ProjectCell from '../components/ProjectCell.astro';
 import HeaderCell from '../components/HeaderCell.astro';
+import ParticlesComponent from "../components/particles.jsx";
 
 
 interface Props {
@@ -16,15 +17,17 @@ interface Props {
 ---
 
 <section id="projects" class="projects">
+    <div class="app">
+        <ParticlesComponent client:visible />
+      </div>
     <h2 class="sectionTitle">Projects</h2>
     <div class="projectsContent">
         <ProjectCell projectTitle ="Projet n°1", projectIcon = "mdi:language-python", projectContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " projectLinkedSkills = "later"/> 
         <ProjectCell projectTitle ="Projet n°2", projectIcon = "mdi:language-python", projectContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " projectLinkedSkills = "later"/> 
         <ProjectCell projectTitle ="Projet n°3", projectIcon = "mdi:language-python", projectContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " projectLinkedSkills = "later"/> 
+        <ProjectCell projectTitle ="Projet n°4", projectIcon = "mdi:language-python", projectContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " projectLinkedSkills = "later"/> 
 
     </div>
-    <p style="position:relative;">bruh</p>
-
   </section>
 
 
@@ -33,12 +36,11 @@ interface Props {
 
 .projects{
     position: relative;
-    display:flex;
+    display:inline;
     flex-wrap: wrap;
     font-family: 'Ledger';
-    background: var(--foreground);
     color:var(--low-contrast-text);
-    height: 50vh;
+    min-height: 100vh;
 }
 
 .projectsContent

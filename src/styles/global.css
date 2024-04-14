@@ -1,5 +1,5 @@
 :root {
-    --background: #D3D3D3;
+    --background: #FEF7F9;
     /* 1 */
     --foreground: #FEF7F9;
     /* 2 */
@@ -17,9 +17,9 @@
     --ring: #F4A9AA;
 
 
-    --low-contrast-text: black;
+    --low-contrast-text: white;
     /*#FFD3E2FE; /* 11 */
-    --high-contrast-text: #550016E8;
+    --high-contrast-text: #e6d9dce8;
 
 }
 
@@ -43,7 +43,8 @@ body {
 }
 
 .sectionTitle {
-    margin : 5vh 0vh 0vh 0vh;
+    margin-top:0;
+    padding-top: 3vh;
     font-size: 1.8em;
     position: relative;
     width: 100%;

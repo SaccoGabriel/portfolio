@@ -2,6 +2,8 @@
 import Link from "./Link.astro";
 import NavigationBar from "./NavigationBar.astro";
 import HeaderCell from "./HeaderCell.astro";
+import ParticlesComponent from "../components/particles.jsx";
+import { StrictMode } from 'react';
 
 import '../styles/header.css'
 import '../styles/global.css'
@@ -17,11 +19,16 @@ interface Props {
 const { name, title, subtitle, job } = Astro.props;
 ---
 
+
+
 <div class = overview>
   <NavigationBar/>
-
 <section id = "header" class= "header">
-
+  <div class="app">
+    
+      <ParticlesComponent client:load />
+    
+</div>
   <!--<HeaderCell iconOrText={title}, title = {name}, description = {subtitle}, tags = {job}/>  -->
   <div class="presentation">
     <div class="title">

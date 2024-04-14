@@ -1,13 +1,17 @@
   .overview {
     position: relative;
-    background: var(--foreground);
     /* Par défaut, la hauteur de la div parente s'ajustera à la taille de ses enfants */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
   }
 
+.app{
+	position: relative;
+
+}
   .header {
+
     position: absolute;
     width: 100%;
     display: flex;
@@ -20,7 +24,6 @@
 
     animation: appear 1s ease-in-out;
     animation-delay: 0s;
-    background: var(--foreground);
   }
 
   img {
@@ -35,7 +38,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 100%;
     flex: 1;
     padding-left: 10%;
 
@@ -62,21 +65,11 @@
 
   }
 
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      /* Commencez avec une opacité à 0 pour le texte invisible */
-    }
 
-    100% {
-      opacity: 1;
-      /* Finissez avec une opacité à 1 pour le texte visible */
-    }
-  }
 
   .name {
     position: relative;
-    left: 5%;
+    padding-left: 5%;
     font-family: "Fjord One";
     font-weight: bolder;
     white-space: nowrap;
@@ -86,7 +79,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
-
+max-width: 100%;
     font-size: clamp(3.3em, 5vw, 5em);
 
   }

@@ -6,25 +6,36 @@ interface Props {}
 const {} = Astro.props;
 ---
 
-<div>
-  <a class="topnav" href="#aboutMe"><span >About</span></a>
-  <a class="topnav" href="#projects"
-    ><span>Projets</span></a
-  >
-  <a class="topnav" href="#skills"><span>Skills</span></a
-  >
+<div class = topnavContainer>
+  <a class="topnav" href="#aboutMe"><span>About</span></a>
+  <a class="topnav" href="#skills"><span>Skills</span></a>
+  <a class="topnav" href="#projects"><span>Projets</span></a>
+  <a class="topnav" href="#contact"><span>Contact</span></a>
+
 </div>
 
 <style>
+  .topnavContainer
+  {
+    position:relative;
+    top: 2vw;
+    z-index: 1;
+    float: right;
+    font-size: 1.5em;
+
+  }
   .topnav {
     position: relative;
-    top: 50px;
-    float: right;
-    margin-right: 15px;
+    margin-right: 1.5vw;
+
     text-underline-offset: inherit;
     text-decoration: none;
     font-family: "Ledger";
-    font-weight: bolder;
-    color: var(--high-contrast-text);
+    font-weight: bold;
+    color: #ef6565;
+  }
+
+  .topnav:hover{
+    color: white;
   }
 </style>
